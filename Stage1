@@ -1,0 +1,172 @@
+#functions 
+def interface():
+  print("----------------- VENDING MACHINE -----------------")
+  print("1      Doritos                   $1.00     " + str(doritos_amt) + " left")
+  print("2      Chocolate Chip Cookies    $1.00     " + str(chocolate_chip_cookies_amt) + " left")
+  print("3      Oreos                     $1.00     " + str(oreos_amt) + " left")
+  print("4      Granola Bar               $0.75     " + str(granola_bar_amt) + " left")
+  print("5      Bubble Gum                $0.50     " + str(bubble_gum_amt) + " left")
+  print("6      Hershey's Bar             $1.00     " + str(hersheys_bar_amt) + " left")
+  print("7      M & M's                   $1.00     " + str(m_and_ms_amt) + " left")
+  print("8      Gatorade                  $1.50     " + str(gatorade_amt) + " left")
+  print("9      Water                     $1.00     " + str(water_amt) + " left")
+  print("10     Coca-Cola                 $1.25     " + str(coca_cola_amt) + " left")
+  print("---------------------------------------------------")
+  print("")
+
+# Amount of each item in the vending machine
+doritos_amt = 10
+chocolate_chip_cookies_amt = 10
+oreos_amt = 10
+granola_bar_amt = 10
+bubble_gum_amt = 10
+hersheys_bar_amt = 10
+m_and_ms_amt = 10
+gatorade_amt = 10
+water_amt = 10
+coca_cola_amt = 10
+
+# Price of each item in the vending machine
+doritos_price = 1.00
+chocolate_chip_cookies_price = 1.00
+oreos_price = 1.00
+granola_bar_price = 0.75
+bubble_gum_price = 0.50
+hersheys_bar_price = 1.00
+m_and_ms_price = 1.00
+gatorade_price = 1.50
+water_price = 1.00
+coca_cola_price = 1.25
+
+print(interface())
+money = float(input("Please enter the amount of money you wish to put into the machine: $"))
+
+while True:
+  # User input for money and item
+
+  item = int(input("Please enter the number of the item you wish to purchase: "))
+  
+  if item == 1:
+    if money >= doritos_price:
+      doritos_amt -= 1
+      change = money - doritos_price
+    else:
+      while money < doritos_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - doritos_price
+  
+  if item == 2:
+    if money >= chocolate_chip_cookies_price:
+      chocolate_chip_cookies_amt -= 1
+      change = money - chocolate_chip_cookies_price
+    else:
+      while money < chocolate_chip_cookies_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - chocolate_chip_cookies_price
+  
+  if item == 3:
+    if money >= oreos_price:
+      oreos_amt -= 1
+      change = money - oreos_price
+    else:
+      while money < oreos_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - oreos_price
+  
+  if item == 4:
+    if money >= granola_bar_price:
+      granola_bar_amt -= 1
+      change = money - granola_bar_price
+    else:
+      while money < granola_bar_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - granola_bar_price
+  
+  if item == 5:
+    if money >= bubble_gum_price:
+      bubble_gum_amt -= 1
+      change = money - bubble_gum_price
+    else:
+      while money < bubble_gum_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - bubble_gum_price
+  
+  if item == 6:
+    if money >= hersheys_bar_price:
+      hersheys_bar_amt -= 1
+      change = money - hersheys_bar_price
+    else:
+      while money < hersheys_bar_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - hersheys_bar_price
+  
+  if item == 7:
+    if money >= m_and_ms_price:
+      m_and_ms_amt -= 1
+      change = money - m_and_ms_price
+    else:
+      while money < m_and_ms_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - m_and_ms_price
+  
+  if item == 8:
+    if money >= gatorade_price:
+      gatorade_amt -= 1
+      change = money - gatorade_price
+    else:
+      while money < gatorade_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - gatorade_price
+  
+  if item == 9:
+    if money >= water_price:
+      water_amt -= 1
+      change = money - water_price
+    else:
+      while money < water_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - water_price
+  
+  if item == 10:
+    if money >= coca_cola_price:
+      coca_cola_amt -= 1
+      change = money - coca_cola_price
+    else:
+      while money < coca_cola_price:
+        print("You do not have enough money to purchase that item.")
+        more_money = float(input("Please insert more money.  Enter the amount to add: $"))
+        money += more_money 
+      change = money - coca_cola_price
+  
+  print("Thank you for your purchase!")
+  print("")
+  more = input("Would you like to purhcase anything else? (Yes/No): ")
+  
+  
+  if more == "No" or more == "no":
+    format_change = "{:.2f}".format(change)
+    print("Here is your change: $" + str(format_change))
+    break
+  else:
+    money = change
+    # Vending Machine Interface
+    print(interface())
+    print("You currently have: $" + str(money))
